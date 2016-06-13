@@ -32,6 +32,13 @@ Rails.
 
 ```md
 <!-- your answer here -->
+HANDLES DATA
+
+A model are basically all the ruby classes and objects:
+
+- communicate with database
+- store information
+- validate data
 ```
 
 ## Define Controller Responsiblities
@@ -41,6 +48,11 @@ in Rails.
 
 ```md
 <!-- your answer here -->
+HANDLES DECISIONS
+Controllers take user input and make decision what to do with it:
+
+- passing it to the model
+- then passing the output to the view
 ```
 
 ## Define Router Responsiblities
@@ -49,6 +61,11 @@ In your own words, define what the router does in Rails.
 
 ```md
 <!-- your answer here -->
+The router recorgnize URLs and sends them to the controller. It can generate URLs so you don't need to code the absulute path in the view.
+
+The router looks at the HTTp verb and the URL and matches it with the right controller action.
+
+source: http://www.theodinproject.com/ruby-on-rails/routing
 ```
 
 ## The Request-Response Cycle in Rails
@@ -58,4 +75,12 @@ the parts of Rails interact to produce and send a response.
 
 ```md
 <!-- your answer here -->
+1. The browser(client) send information(user input) to the Controller.
+2. Controller makes decsion about what to do:
+  - it might connect to the Model
+3. The Model can interact with a database (sending, receving data etc.) and send that back to the Controller.
+4. Once the controller is satisfied and think it can process the user request, it sends all the infromation needed to the View.
+5. The View decides which HTML,CSS, Javascript will get returned to the browser
+
+
 ```
